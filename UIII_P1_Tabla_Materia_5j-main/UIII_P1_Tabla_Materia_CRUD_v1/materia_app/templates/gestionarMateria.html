@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+
+{% block cuerpo %}
+<div class="row">
+    <div class="col-sm-12-md-4 col-md-4 col-lg-4 col-xl-4">
+        <h1>mama</h1>
+    </div>
+        <div class="col-sm-12-md-8 col-md-8 col-lg-8 col-xl-4">
+<h1>papa</h1>
+      
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">codigo</th>
+        <th scope="col">nombre</th>
+        <th scope="col">creditos</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for m in mismaterias %}
+    
+    <tr>
+
+    <td>{{forloop.counter}}</td>
+    <td>{{m.codigo}}</td>
+    <td>{{m.nombre}}</td>
+    <td>{{m.credits}}</td>
+    </tr>
+    
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
